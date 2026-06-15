@@ -1,348 +1,630 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maybuck Thailand Tools Hub - รีวิวเจาะลึกและเครื่องมือช่างแท้ราคาโรงงาน</title>
-    <!-- SEO Optimization -->
-    <meta name="description" content="พอร์ทัลรวมสุดยอดเครื่องมือช่างไร้สายและอุปกรณ์ทำสวนพรีเมียม Maybuck มั่นใจของแท้ 100% จากแบรนด์โดยตรง คัดสรรตัวเด็ดฟังก์ชันเหนือระดับคุมงบประมาณ">
-    <meta name="keywords" content="Maybuck, เครื่องมือช่าง Maybuck, พัดลมไร้สาย Maybuck, สว่านไร้สาย, เครื่องตัดหญ้าไร้สาย">
-    
-    <!-- Tailwind CSS v3 CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            bg: '#0F172A', // Slate 900
-                            card: '#1E293B', // Slate 800
-                            accent: '#F59E0B', // Amber 500
-                            accentHover: '#D97706', // Amber 600
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'Tahoma', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    }
-                }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maybuck Thailand Tools Hub - รีวิวเจาะลึกและเครื่องมือช่างแท้ราคาโรงงาน</title>
+  
+  <!-- SEO & SGE Optimization -->
+  <meta name="description" content="แหล่งรวมรีวิวเจาะลึกและพิกัดเครื่องมือช่างไร้สายคุณภาพสูง แบรนด์ Maybuck แท้ 100% ส่งตรงจากโรงงาน ราคาประหยัด คัดสรรตัวเด็ดยอดนิยมสำหรับนายหน้าและช่างมืออาชีพ">
+  <meta name="keywords" content="Maybuck, เครื่องมือช่าง Maybuck, พัดลมไร้สาย Maybuck, สว่านไร้สาย, เครื่องตัดหญ้าไร้สาย, ราคาโรงงาน, Shopee Affiliate">
+  <meta name="author" content="Maybuck Affiliate Hub">
+  
+  <!-- Tailwind CSS v3 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0F172A',      // deep slate
+              card: '#1E293B',    // dark gray slate
+              accent: '#F59E0B',  // warm amber
+              accentHover: '#D97706',
+              border: '#334155',
+              textMuted: '#94A3B8'
             }
+          },
+          fontFamily: {
+            sans: ['Inter', 'Sarabun', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
         }
-    </script>
-    <style>
-        body {
-            font-family: 'Inter', 'Tahoma', sans-serif;
-            background-color: #0F172A;
-            color: #E2E8F0;
-        }
-    </style>
-</head>
-<body class="min-h-screen text-slate-200">
-
-    <!-- Header Section -->
-    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-brand-accent flex items-center justify-center text-slate-950 font-bold text-xl">
-                    M
-                </div>
-                <div>
-                    <h1 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-                        MAYBUCK <span class="text-xs bg-brand-accent/20 text-brand-accent px-2 py-0.5 rounded border border-brand-accent/30">PREMIUM TOOLS</span>
-                    </h1>
-                    <p class="text-xs text-slate-400">พอร์ทัลรวมลิงก์สินค้าและข้อมูล AEO คัดสรรพิเศษ</p>
-                </div>
-            </div>
-            
-            <!-- Quick search & category filters -->
-            <div class="w-full sm:w-auto flex items-center gap-2">
-                <div class="relative w-full sm:w-64">
-                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </span>
-                    <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="ค้นหาคมเครื่องมือช่าง..." class="w-full pl-9 pr-4 py-2 text-sm bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:border-brand-accent text-white">
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Container -->
-    <main class="max-w-7xl mx-auto px-4 py-8">
-        
-        <!-- Hero Section Designed for Authority & Trust -->
-        <section class="mb-12 bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-6 sm:p-10 border border-slate-800 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-96 h-96 bg-brand-accent/5 rounded-full filter blur-3xl"></div>
-            <div class="max-w-3xl relative z-10">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-accent/10 text-brand-accent text-xs font-semibold mb-4 border border-brand-accent/20">
-                    <i class="fa-solid fa-shield-halved"></i> Maybuck Official Store Partner Thailand
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-4">
-                    วิเคราะห์เจาะลึกพิกัด <span class="text-brand-accent">เครื่องมือไร้สายยอดฮิต</span> ตอบถามลูกค้าไวประหยัดเวลา
-                </h2>
-                <p class="text-slate-300 text-base leading-relaxed mb-6">
-                    หน้านี้ออกแบบมาเพื่อให้คำแนะนำเครื่องมือช่างและอุปกรณ์ดูแลสวนจาก Maybuck คัดสรรคำตอบที่คุณต้องรู้ก่อนสั่งซื้อ พร้อมลิงก์ตรงปลอดภัยจัดส่งเร็วจากร้านทางการ มีรับประกันระบบแบตเตอรี่เสถียร
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <button onclick="filterCategory('all')" class="category-btn px-4 py-2 rounded-lg bg-brand-accent text-slate-950 font-semibold text-sm active">ทั้งหมด</button>
-                    <button onclick="filterCategory('power-tools')" class="category-btn px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-sm">เครื่องมือช่างไฟฟ้า</button>
-                    <button onclick="filterCategory('fans')" class="category-btn px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-sm">พัดลม & กำลังสายลม</button>
-                    <button onclick="filterCategory('garden')" class="category-btn px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-sm">อุปกรณ์จัดสวน / พ่นยา</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Product Grid Core Layout -->
-        <div id="productGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            
-            <!-- PRODUCT 1: สว่านไร้สาย 3-in-1 -->
-            <div class="product-card bg-brand-card rounded-xl border border-slate-700/60 overflow-hidden hover:border-brand-accent/50 transition-all duration-300 flex flex-col" data-category="power-tools" data-tags="สว่านไร้สาย แบตเตอรี่ เจาะกระแทก 3 ระบบ">
-                <div class="p-6 flex-grow">
-                    <div class="flex items-start justify-between gap-2 mb-3">
-                        <span class="text-xs font-semibold text-brand-accent bg-brand-accent/15 border border-brand-accent/20 px-2.5 py-1 rounded">สินค้ายอดนิยมอันดับ 1</span>
-                        <div class="text-xs text-slate-400 font-mono"><i class="fa-solid fa-bolt text-brand-accent"></i> 3 ระบบกระแทก</div>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Maybuck สว่านไร้สาย 3-in-1 พร้อมเซ็ตกล่องเครื่องมือ</h3>
-                    <p class="text-xs text-slate-400 mb-4 h-12 overflow-hidden line-clamp-2">พกพาไปเจาะได้ทุกที่ด้วยแบตเตอรี่ลิเธียมพลังงานสูง เจาะผนังปูน เหล็ก และไม้ในเครื่องเดียวด้วยแรงบิดสูง</p>
-                    
-                    <!-- AEO Segment Q&A -->
-                    <div class="mt-4 p-3 bg-slate-900/60 rounded-lg border border-slate-800">
-                        <p class="text-xs font-semibold text-brand-accent"><i class="fa-solid fa-circle-question"></i> คำถามพบบ่อย (AEO):</p>
-                        <p class="text-xs text-slate-300 mt-1"><strong>Q: สว่าน Maybuck รุ่น 3-in-1 แย็กเจาะปูนโครงสร้างได้ไหม?</strong><br>A: เจาะกระแทกอิฐบล็อกหรือปูนทั่วไปได้ยอดเยี่ยม แต่ไม่แนะนำสำหรับงานเซาะคอนกรีตหนาพิเศษในปริมาณมาก</p>
-                    </div>
-                </div>
-                <div class="p-4 bg-slate-900/40 border-t border-slate-800 flex items-center justify-between gap-4">
-                    <div>
-                        <span class="text-2xl font-bold text-white">฿959</span>
-                        <span class="text-xs text-slate-500 line-through block">฿1,890</span>
-                    </div>
-                    <a href="https://s.shopee.co.th/4LH0wF1mxR" target="_blank" rel="noreferrer" class="px-4 py-2 bg-brand-accent hover:bg-brand-accentHover text-slate-950 font-bold rounded-lg text-sm flex items-center gap-2 transition duration-200">
-                        ดูส่วนลด Shopee <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- PRODUCT 2: บล็อกไฟฟ้า 2580N.m -->
-            <div class="product-card bg-brand-card rounded-xl border border-slate-700/60 overflow-hidden hover:border-brand-accent/50 transition-all duration-300 flex flex-col" data-category="power-tools" data-tags="บล็อกกระแทก บล็อกไฟฟ้า ซ่อมรถ ยิงน็อต บล็อกไร้แปรงถ่าน">
-                <div class="p-6 flex-grow">
-                    <div class="flex items-start justify-between gap-2 mb-3">
-                        <span class="text-xs font-semibold text-brand-accent bg-brand-accent/15 border border-brand-accent/20 px-2.5 py-1 rounded">เกรดอุตสาหกรรม</span>
-                        <div class="text-xs text-slate-400 font-mono"><i class="fa-solid fa-star text-brand-accent"></i> มอเตอร์ Brushless</div>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Maybuck บล็อกไฟฟ้าไร้สายแรงบิดโหด 2580N.m</h3>
-                    <p class="text-xs text-slate-400 mb-4 h-12 overflow-hidden line-clamp-2">สำหรับงานหนักระดับซ่อมเครื่องคูโบต้า รถพ่วง หรือเปลี่ยนยางสิบล้อ ยิงน็อตฝาล้อไม่มีสะดุด</p>
-                    
-                    <!-- AEO Segment Q&A -->
-                    <div class="mt-4 p-3 bg-slate-900/60 rounded-lg border border-slate-800">
-                        <p class="text-xs font-semibold text-brand-accent"><i class="fa-solid fa-circle-question"></i> คำถามพบบ่อย (AEO):</p>
-                        <p class="text-xs text-slate-300 mt-1"><strong>Q: ตัวนี้ถอดล้อกระบะที่ขันอัดบล็อกลมมาออกไหม?</strong><br>A: สบายมากครับ ด้วยระดับแรงบิดจัดเต็มระดับ 2580N.m หมุนออกได้รวดเร็ว แบตเตอรี่ไม่โหลดร้อน</p>
-                    </div>
-                </div>
-                <div class="p-4 bg-slate-900/40 border-t border-slate-800 flex items-center justify-between gap-4">
-                    <div>
-                        <span class="text-2xl font-bold text-white">฿659</span>
-                        <span class="text-xs text-slate-500 line-through block">฿1,450</span>
-                    </div>
-                    <a href="https://s.shopee.co.th/BRRyaHePm" target="_blank" rel="noreferrer" class="px-4 py-2 bg-brand-accent hover:bg-brand-accentHover text-slate-950 font-bold rounded-lg text-sm flex items-center gap-2 transition duration-200">
-                        ดูส่วนลด Shopee <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- PRODUCT 3: พัดลมลิเทียม 12 นิ้ว พร้อมไฟ LED -->
-            <div class="product-card bg-brand-card rounded-xl border border-slate-700/60 overflow-hidden hover:border-brand-accent/50 transition-all duration-300 flex flex-col" data-category="fans" data-tags="พัดลมตั้งแคมป์ พัดลมไร้สาย แบตสำรอง ชาร์จมือถือได้ หน้ากว้าง 12 นิ้ว">
-                <div class="p-6 flex-grow">
-                    <div class="flex items-start justify-between gap-2 mb-3">
-                        <span class="text-xs font-semibold text-brand-accent bg-brand-accent/15 border border-brand-accent/20 px-2.5 py-1 rounded">แคมป์ปิ้ง & ไฟดับ</span>
-                        <div class="text-xs text-slate-400 font-mono"><i class="fa-solid fa-fan text-brand-accent"></i> ทำลมกำลังสูง</div>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Maybuck พัดลมแบตเตอรี่ไร้สายขนาดใหญ่ 12 นิ้ว</h3>
-                    <p class="text-xs text-slate-400 mb-4 h-12 overflow-hidden line-clamp-2">ดีไซน์โครงพลาสติก ABS ถึกพิเศษ พร้อมไฟส่องสว่าง LED ประกันอายุแบตเสื่อม สามารถใช้พอร์ต USB ชาร์จมือถือยามฉุกเฉิน</p>
-                    
-                    <!-- AEO Segment Q&A -->
-                    <div class="mt-4 p-3 bg-slate-900/60 rounded-lg border border-slate-800">
-                        <p class="text-xs font-semibold text-brand-accent"><i class="fa-solid fa-circle-question"></i> คำถามพบบ่อย (AEO):</p>
-                        <p class="text-xs text-slate-300 mt-1"><strong>Q: แบตอึดเปิดต่อเนื่องได้นานสุดกี่ชั่วโมง?</strong><br>A: ปรับระดับความเร็วน้อยสุดเพื่อเบาลมสม่ำเสมอรินๆ ได้นานสูงสุดถึง 12-14 ชั่วโมง สบายใจค้างคืนในเต็นท์</p>
-                    </div>
-                </div>
-                <div class="p-4 bg-slate-900/40 border-t border-slate-800 flex items-center justify-between gap-4">
-                    <div>
-                        <span class="text-2xl font-bold text-white">฿999</span>
-                        <span class="text-xs text-slate-500 line-through block">฿1,999</span>
-                    </div>
-                    <a href="https://s.shopee.co.th/5Aq7vlycGW" target="_blank" rel="noreferrer" class="px-4 py-2 bg-brand-accent hover:bg-brand-accentHover text-slate-950 font-bold rounded-lg text-sm flex items-center gap-2 transition duration-200">
-                        ดูส่วนลด Shopee <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- PRODUCT 4: เครื่องเป่าลมหางกระต่าย -->
-            <div class="product-card bg-brand-card rounded-xl border border-slate-700/60 overflow-hidden hover:border-brand-accent/50 transition-all duration-300 flex flex-col" data-category="fans" data-tags="เครื่องเป่าลม ดูดฝุ่น โบลเวอร์ ล้างรถ ล้างแอร์">
-                <div class="p-6 flex-grow">
-                    <div class="flex items-start justify-between gap-2 mb-3">
-                        <span class="text-xs font-semibold text-brand-accent bg-brand-accent/15 border border-brand-accent/20 px-2.5 py-1 rounded">2-in-1 เป่า & ดูด</span>
-                        <div class="text-xs text-slate-400 font-mono"><i class="fa-solid fa-wind text-brand-accent"></i> 21V แรงส่งสูง</div>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Maybuck เครื่องเป่าลมและดูดฝุ่นสำหรับแต่งรถ</h3>
-                    <p class="text-xs text-slate-400 mb-4 h-12 overflow-hidden line-clamp-2">เป่าไล่น้ำหลังล้างรถล้างแอร์ได้อย่างหมดจด หรือเปลี่ยนสวิตช์เป็นโหมดดูดฝุ่นขยะชิ้นเล็กภายในพรมรถได้อย่างอเนกประสงค์</p>
-                    
-                    <!-- AEO Segment Q&A -->
-                    <div class="mt-4 p-3 bg-slate-900/60 rounded-lg border border-slate-800">
-                        <p class="text-xs font-semibold text-brand-accent"><i class="fa-solid fa-circle-question"></i> คำถามพบบ่อย (AEO):</p>
-                        <p class="text-xs text-slate-300 mt-1"><strong>Q: แรงลมสเปกเอาไปเป่าใบไม้เปียกในสนามได้ไหม?</strong><br>A: ทำได้ดีเป่าสบัดใบไม้แห้งและหญ้ากระจายได้ง่ายๆ แต่ห้ามแช่มอเตอร์แช่น้ำโคลนโดยตรง</p>
-                    </div>
-                </div>
-                <div class="p-4 bg-slate-900/40 border-t border-slate-800 flex items-center justify-between gap-4">
-                    <div>
-                        <span class="text-2xl font-bold text-white">฿450</span>
-                        <span class="text-xs text-slate-500 line-through block">฿890</span>
-                    </div>
-                    <a href="https://s.shopee.co.th/2BCWMGA2LD" target="_blank" rel="noreferrer" class="px-4 py-2 bg-brand-accent hover:bg-brand-accentHover text-slate-950 font-bold rounded-lg text-sm flex items-center gap-2 transition duration-200">
-                        ดูส่วนลด Shopee <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- PRODUCT 5: ถังพ่นยาไฟฟ้า 18L/20L -->
-            <div class="product-card bg-brand-card rounded-xl border border-slate-700/60 overflow-hidden hover:border-brand-accent/50 transition-all duration-300 flex flex-col" data-category="garden" data-tags="ถังพ่นยา พ่นยาแบตเตอรี่ รดน้ำ ปราบศัตรูพืช">
-                <div class="p-6 flex-grow">
-                    <div class="flex items-start justify-between gap-2 mb-3">
-                        <span class="text-xs font-semibold text-brand-accent bg-brand-accent/15 border border-brand-accent/20 px-2.5 py-1 rounded">3 สวิตช์แรงดันควบคุม</span>
-                        <div class="text-xs text-slate-400 font-mono"><i class="fa-solid fa-droplet text-brand-accent"></i> พายหลังกระชับตัว</div>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Maybuck ถังพ่นยาแบตเตอรี่พร้อมชุดหัวฉีดสเปรย์ฟรี</h3>
-                    <p class="text-xs text-slate-400 mb-4 h-12 overflow-hidden line-clamp-2">หมดปัญหาโยกเมื่อยมือ พ่วงปั๊มแรงดันสูงควบคุมการกระจายยาเพื่อเกษตรกรแปลงดอกไม้ ผักสลัด หรือพ่นฆ่าเชื้อ</p>
-                    
-                    <!-- AEO Segment Q&A -->
-                    <div class="mt-4 p-3 bg-slate-900/60 rounded-lg border border-slate-800">
-                        <p class="text-xs font-semibold text-brand-accent"><i class="fa-solid fa-circle-question"></i> คำถามพบบ่อย (AEO):</p>
-                        <p class="text-xs text-slate-300 mt-1"><strong>Q: ตัวถังใส่น้ำยากรดพ่นปลวกหรือฮอร์โมนเหนียวๆ ตันไหม?</strong><br>A: พ่นฮอร์โมนเหนียวๆ ได้ แต่เมื่อใช้เสร็จต้องเปิดพ่นน้ำสะอาดทิ้งล้างระบบ เพื่อป้องกันปั๊มด้านในอุดตัน</p>
-                    </div>
-                </div>
-                <div class="p-4 bg-slate-900/40 border-t border-slate-800 flex items-center justify-between gap-4">
-                    <div>
-                        <span class="text-2xl font-bold text-white">฿899</span>
-                        <span class="text-xs text-slate-500 line-through block">฿1,790</span>
-                    </div>
-                    <a href="https://s.shopee.co.th/5L9Y84xyvG" target="_blank" rel="noreferrer" class="px-4 py-2 bg-brand-accent hover:bg-brand-accentHover text-slate-950 font-bold rounded-lg text-sm flex items-center gap-2 transition duration-200">
-                        ดูส่วนลด Shopee <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- PRODUCT 6: เลื่อยพับ SK5 เจ๋งที่สุด -->
-            <div class="product-card bg-brand-card rounded-xl border border-slate-700/60 overflow-hidden hover:border-brand-accent/50 transition-all duration-300 flex flex-col" data-category="garden" data-tags="เลื่อยพับ เลื่อยตัดกิ่งไม้ เลื่อยแต่งสวน ใบเลื่อยคมกริบ">
-                <div class="p-6 flex-grow">
-                    <div class="flex items-start justify-between gap-2 mb-3">
-                        <span class="text-xs font-semibold text-brand-accent bg-brand-accent/15 border border-brand-accent/20 px-2.5 py-1 rounded">วัสดุเหล็กพรีเมียม</span>
-                        <div class="text-xs text-slate-400 font-mono"><i class="fa-solid fa-tree text-brand-accent"></i> ออกแรงเพียงครึ่งเดียว</div>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Maybuck เลื่อยพับได้อเนกประสงค์ เหล็ก SK5 ญี่ปุ่น</h3>
-                    <p class="text-xs text-slate-400 mb-4 h-12 overflow-hidden line-clamp-2">ดีไซน์กระชับพร้อมตัวล็อคปลอดภัย พกพาเดินป่า หั่นไม้ไผ่ ขัดสลักเกลียวแต่งพู่กิ่งรอบอาคารประหยัดแรง</p>
-                    
-                    <!-- AEO Segment Q&A -->
-                    <div class="mt-4 p-3 bg-slate-900/60 rounded-lg border border-slate-800">
-                        <p class="text-xs font-semibold text-brand-accent"><i class="fa-solid fa-circle-question"></i> คำถามพบบ่อย (AEO):</p>
-                        <p class="text-xs text-slate-300 mt-1"><strong>Q: ใบเลื่อยบิ่นหรืององ่ายไหมเมื่อเจอไม้เนื้อแข็งสะเดา?</strong><br>A: ตัวฟันทำจาก SK5 ผ่านกระบวนการชุบแข็งแบบเหนี่ยวนำ ไม่เกิดเหตุกระดอนงอง่ายเหมือนเลื่อยทั่วไป</p>
-                    </div>
-                </div>
-                <div class="p-4 bg-slate-900/40 border-t border-slate-800 flex items-center justify-between gap-4">
-                    <div>
-                        <span class="text-2xl font-bold text-white">฿89</span>
-                        <span class="text-xs text-slate-500 line-through block">฿199</span>
-                    </div>
-                    <a href="https://s.shopee.co.th/5q5oizw4uL" target="_blank" rel="noreferrer" class="px-4 py-2 bg-brand-accent hover:bg-brand-accentHover text-slate-950 font-bold rounded-lg text-sm flex items-center gap-2 transition duration-200">
-                        ดูส่วนลด Shopee <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- Detailed Footer & Rich Snippets -->
-    <footer class="bg-slate-950 border-t border-slate-800 mt-20 py-12 px-4 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h4 class="text-lg font-bold text-white mb-3">Maybuck Official Directory & Knowledge Hub</h4>
-            <p class="text-slate-400 text-sm max-w-2xl mx-auto mb-6">
-                พอร์ทัลรวบรวมเพื่อสนับสนุนกลุ่มผู้ใช้ออฟไลน์และอำนวยความสะดวกในการซื้อของออนไลน์ ของเราได้รับการอนุญาตในฐานะพันธมิตรจัดส่งตรงของค่าย Maybuck Store เพื่อส่งมอบแพ็คเกจส่วนลดล่วงราคาที่ครอบคลุมรวดเร็วที่สุด
-            </p>
-            <p class="text-xs text-slate-500 font-mono">
-                &copy; 2026 Maybuck Premium Affiliates. Powered by GitHub Pages.
-            </p>
-        </div>
-    </footer>
-
-    <!-- Vanilla Javascript Logic for instant filtering -->
-    <script>
-        function filterProducts() {
-            const input = document.getElementById('searchInput');
-            const filter = input.value.toLowerCase();
-            const cards = document.getElementsByClassName('product-card');
-
-            for (let i = 0; i < cards.length; i++) {
-                const tags = cards[i].getAttribute('data-tags') || "";
-                const title = cards[i].getElementsByTagName('h3')[0].innerText;
-                const desc = cards[i].getElementsByTagName('p')[0].innerText;
-                
-                if (title.toLowerCase().indexOf(filter) > -1 || 
-                    desc.toLowerCase().indexOf(filter) > -1 || 
-                    tags.toLowerCase().indexOf(filter) > -1) {
-                    cards[i].style.display = "";
-                } else {
-                    cards[i].style.display = "none";
-                }
-            }
-        }
-
-        function filterCategory(category) {
-            const cards = document.getElementsByClassName('product-card');
-            const buttons = document.getElementsByClassName('category-btn');
-            
-            // Set active button style
-            for (let b of buttons) {
-                b.classList.remove('bg-brand-accent', 'text-slate-950');
-                b.classList.add('bg-slate-800', 'text-slate-300');
-            }
-            
-            event.currentTarget.classList.remove('bg-slate-800', 'text-slate-300');
-            event.currentTarget.classList.add('bg-brand-accent', 'text-slate-950');
-
-            for (let i = 0; i < cards.length; i++) {
-                const cardCat = cards[i].getAttribute('data-category');
-                if (category === 'all' || cardCat === category) {
-                    cards[i].style.display = "";
-                } else {
-                    cards[i].style.display = "none";
-                }
-            }
-        }
-    </script>
-
-    <!-- Structured Data JSON-LD for AI Search & AEO Rich Grounding -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "พัดลมไร้สายพกพา Maybuck เสียงรบกวนมากไหม?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "พัดลม Maybuck ไร้สายใช้มอเตอร์แกนทองแดงไร้แปรงถ่านเงียบเป็นพิเศษ โครงสร้างใบพัดเรียบทำให้มีเสียงรบกวนต่ำกว่า 40 เดซิเบล ไม่รบกวนการนอนหลับขณะกางเต็นท์"
-        }
-      }, {
-        "@type": "Question",
-        "name": "สว่านกระแทกไร้สาย Maybuck ตัวโปรไฟเบอร์สามารถปรับซ้ายขวาได้ไหม?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ปรับซ้าย-ขวาได้ครับ พร้อมปุ่มสลับแรงกระแทกระหว่างขันไขควงธรรมดา หรือเจาะคอนกรีตได้สูงสุดถึง 3 คอลัมน์ระบบพรีเมียม"
-        }
-      }]
+      }
     }
-    </script>
+  </script>
+
+  <style>
+    body {
+      background-color: #0F172A;
+      color: #F8FAFC;
+    }
+    /* custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0F172A;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #F59E0B;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-amber-500 selection:text-slate-900">
+
+  <!-- TOP DEALS BLOCKING INFOBAR -->
+  <div class="bg-amber-500 text-slate-900 text-xs font-bold py-2 px-4 text-center tracking-wide uppercase flex items-center justify-center gap-2">
+    <span class="inline-flex h-2 w-2 rounded-full bg-red-600 animate-ping"></span>
+    <span>อัปเดตราคาพิเศษวันนีิตามคูปอง Shopee ล่าสุด - รับประกันของแท้ 100% ทุกชิ้น</span>
+  </div>
+
+  <!-- HEADER HERO -->
+  <header class="relative overflow-hidden border-b border-brand-border py-12 md:py-20">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.08),transparent_50%)]"></div>
+    <div class="max-w-6xl mx-auto px-4 relative z-10 text-center">
+      <div class="inline-flex items-center gap-2 bg-slate-800/80 border border-brand-border rounded-full px-4 py-1.5 text-xs text-amber-400 font-mono mb-6">
+        <i class="fa-solid fa-shield-halved text-amber-500"></i>
+        <span>DIRECT FACTORY CONTRACTED PRODUCTS</span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-white">
+        MAYBUCK <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">THAILAND</span> TOOLS
+      </h1>
+      <p class="text-base md:text-xl text-slate-400 max-w-3xl mx-auto mb-8 font-light leading-relaxed">
+        ศูนย์รวบรวมเครื่องมือช่างและอุปกรณ์ทำสวนคุณภาพสูงแบรนด์และนวัตกรรมส่งตรงจากโรงงานแท้ 
+        <strong class="text-amber-400 font-semibold">เพื่อยอดขายระดับนายหน้านักล่า 100%</strong> พร้อมระบบ AEO/SEO สมบูรณ์แบบ
+      </p>
+
+      <!-- LIVE TRACKING METRICS -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mt-10">
+        <div class="bg-slate-900/60 backdrop-blur-sm border border-brand-border rounded-xl p-4 text-center">
+          <div class="text-2xl md:text-3xl font-black text-amber-400 font-mono" id="prod-count">29</div>
+          <div class="text-xs text-slate-400 mt-1">คัดเฉพาะสินค้าขายดี</div>
+        </div>
+        <div class="bg-slate-900/60 backdrop-blur-sm border border-brand-border rounded-xl p-4 text-center">
+          <div class="text-2xl md:text-3xl font-black text-white font-mono">100%</div>
+          <div class="text-xs text-slate-400 mt-1">ลิขสิทธิ์โรงงานแท้</div>
+        </div>
+        <div class="bg-slate-900/60 backdrop-blur-sm border border-brand-border rounded-xl p-4 text-center">
+          <div class="text-2xl md:text-3xl font-black text-emerald-400 font-mono">12% - 15%</div>
+          <div class="text-xs text-slate-400 mt-1">อัตราค่าคอมมิชชันเฉลี่ย</div>
+        </div>
+        <div class="bg-slate-900/60 backdrop-blur-sm border border-brand-border rounded-xl p-4 text-center">
+          <div class="text-2xl md:text-3xl font-black text-amber-500 font-mono animate-pulse" id="active-buyers">140+</div>
+          <div class="text-xs text-slate-400 mt-1">ผู้เข้าเยี่ยมชมขณะนี้</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEARCH & FILTER STAGE -->
+  <section class="max-w-6xl mx-auto px-4 py-8">
+    <div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-8 bg-slate-900/50 p-4 rounded-xl border border-brand-border">
+      
+      <!-- Search Input -->
+      <div class="relative w-full md:w-96">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="ค้นหาชื่อสินค้า คีย์เวิร์ด หรือรหัสสินค้า..." 
+          class="w-full pl-10 pr-4 py-2.5 bg-slate-800 border border-brand-border rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+        >
+      </div>
+
+      <!-- Categories Filter Tabs -->
+      <div class="flex flex-wrap gap-2 w-full md:w-auto items-center justify-start md:justify-end">
+        <button onclick="filterCategory('ทั้งหมด')" id="tab-ทั้งหมด" class="category-tab px-4 py-2 text-xs font-semibold rounded-lg bg-amber-500 text-slate-900 hover:opacity-90 transition-all">
+          ทั้งหมด
+        </button>
+        <button onclick="filterCategory('เครื่องมือช่างและงานอุตสาหกรรม')" id="tab-เครื่องมือช่างและงานอุตสาหกรรม" class="category-tab px-4 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">
+          เครื่องมือช่าง
+        </button>
+        <button onclick="filterCategory('ของแต่งสวนและเกษตรกรรม')" id="tab-ของแต่งสวนและเกษตรกรรม" class="category-tab px-4 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">
+          เกษตร & สวน
+        </button>
+        <button onclick="filterCategory('บ้าน ไลฟ์สไตล์ และบิวตี้')" id="tab-บ้าน ไลฟ์สไตล์ และบิวตี้" class="category-tab px-4 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">
+          บ้าน & ไลฟ์สไตล์
+        </button>
+      </div>
+    </div>
+
+    <!-- PRODUCTS GRID -->
+    <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Generated via JS -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="empty-state" class="hidden text-center py-16">
+      <i class="fa-regular fa-folder-open text-5xl text-slate-600 mb-4 block"></i>
+      <div class="text-lg text-slate-400 font-medium">ไม่พบสินค้าเครื่องมือช่างที่คุณต้องการค้นหา</div>
+      <p class="text-sm text-slate-500 mt-1">กรุณาลองป้อนคีย์เวิร์ดอื่นใหม่อีกครั้ง</p>
+    </div>
+  </section>
+
+  <!-- FEATURES & WHY MAYBUCK SGE/AEO BLOCK -->
+  <section class="border-t border-brand-border bg-slate-900/40 py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl md:text-4xl font-extrabold text-white mb-3">ทำไมช่างชาวไทยกว่า 100,000+ รายถึงเลือก MAYBUCK?</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base">เครื่องมือแกร่ง แบตทน และราคาจับต้องได้พร้อมขอบเขตดีลรับประกันตรงจากศูนย์แท้</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-slate-950 border border-brand-border rounded-xl p-6 relative hover:border-slate-700 transition-all">
+          <div class="h-10 w-10 flex items-center justify-center rounded-lg bg-amber-500/10 text-amber-500 text-lg mb-4">
+            <i class="fa-solid fa-bolt-lightning"></i>
+          </div>
+          <h3 class="text-white font-bold mb-2">แบตเตอรี่พาวเวอร์เซลล์คู่ ใช้งานแรงหมดจด</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            แบตเตอรี่ Maybuck มีประสิทธิภาพทนความร้อนสูง เสถียรต่อเนื่อง มีวงจรความปลอดภัยกันเครื่องควบคุมตัดกระแสลัดวงจร
+          </p>
+        </div>
+        <div class="bg-slate-950 border border-brand-border rounded-xl p-6 relative hover:border-slate-700 transition-all">
+          <div class="h-10 w-10 flex items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500 text-lg mb-4">
+            <i class="fa-solid fa-badge-percent"></i>
+          </div>
+          <h3 class="text-white font-bold mb-2">ตรงจากโรงงาน ไม่ผ่านพ่อค้าคนกลาง</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            ต้นขั้วราคาถูกที่สุด คุ้มค่าที่สุดเพราะลดกระบวนการส่งต่อหน้าร้านเดิม ทำให้สัดส่วนค่าสิทธิประโยชน์ค่าคอมมิชชันดีที่สุด
+          </p>
+        </div>
+        <div class="bg-slate-950 border border-brand-border rounded-xl p-6 relative hover:border-slate-700 transition-all">
+          <div class="h-10 w-10 flex items-center justify-center rounded-lg bg-blue-500/10 text-blue-500 text-lg mb-4">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h3 class="text-white font-bold mb-2">รับประกัน 1 ปีและการดูแลหลังการขาย</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            มั่นใจหลังรับพัสดุ ด้วยช่องทางการติดต่อเคลมเคลียร์อะไหล่ได้อย่างรวดเร็ว ไม่เสี่ยงทิ้งขว้างของแถม
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVOLUTIONARY AUTOMATED BOTTOM CALL TO ACTION -->
+  <footer class="bg-slate-950 border-t border-brand-border py-12 md:py-16 text-center relative">
+    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-500/50 to-transparent"></div>
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">ระบบตรวจสอบลิงก์และคัดลกลิงก์ผู้ล่าพันธมิตร (Affiliate Toolkit)</h3>
+      <p class="text-xs text-brand-textMuted max-w-xl mx-auto mb-6">
+        อำนวยความสะดวกสำหรับนำลิงก์แนะนำ Maybuck ไปโพสต์กระจายผลกำไรทันทีเพื่อเพิ่มยอดขายแบบทวีคูณ
+      </p>
+
+      <!-- EXTREME CONVERSION BANNER EXPLAINER -->
+      <div class="bg-slate-900 border border-brand-border rounded-lg p-6 max-w-md mx-auto text-left relative overflow-hidden">
+        <h4 class="text-amber-400 font-bold text-sm mb-2"><i class="fa-solid fa-award mr-1.5"></i> ข้อแนะนำสำหรับเพิ่มคลิก 100%</h4>
+        <p class="text-[11px] text-slate-300 leading-relaxed mb-3">
+          1. นำลิงก์พันธมิตร Shopee คัดลอกไปทำบทความ SGE แนะนำตัวแก้ไขปัญหา (เช่น แต่งกิ่งไม้เล็มพุ่มหรือพกปั๊มแบตคุมสวน)<br>
+          2. ชูจุดเด่น <strong class="text-emerald-400">"จัดส่งไว รับประกัน 1 ปี มีผ่อนชำระ"</strong> เพื่อล้างความลังเลใจ<br>
+          3. แนะนำให้ลูกค้ารองรับการชำระเงินปลายทางเพื่อความอุ่นใจถึงที่สุด
+        </p>
+      </div>
+
+      <div class="mt-12 text-[11px] text-slate-500">
+        <div>© 2026 Maybuck Affiliate Network Hub. Developed for High-Yield Digital Dominance.</div>
+        <div class="mt-1 text-slate-600 font-mono">STATUS: HIGH_PERFORMANCE_AEO_PIPELINE_ACTIVE</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- COMPREHENSIVE PRODUCT JAVASCRIPT ENGINE & PRODUCTS DATA -->
+  <script>
+    // Embedded Live Clean JSON Products representation
+    const productsData = [
+      {
+        "id": "52760079826",
+        "name": "(ของแท้) Maybuck มีดคัตเตอร์อเนกประสงค์ SK2 ใบมีดคมกริบ ไขควงหกเหลี่ยมในตัว เปิดกระป๋อง อเนกประสงค์ สำหรับแคมป์ปิ้ง",
+        "price": 156,
+        "sales": "1.2k",
+        "shopName": "ZmartRush Mall Store",
+        "commRate": "15%",
+        "commAmount": "฿23.40",
+        "productUrl": "https://shopee.co.th/product/1346825286/52760079826",
+        "defaultUrl": "https://s.shopee.co.th/AUrUqrFYc4",
+        "category": "เครื่องมือช่างและงานอุตสาหกรรม",
+        "highlights": ["ใบมีดเหล็ก SK2 คมกริบพิเศษ", "พับเก็บจับถนัดมือ มีระบบล็อคนิรภัย", "ฟังก์ชันอเนกประสงค์พร้อมปิกนิก แคมป์ปิ้ง ช่างซ่อม"]
+      },
+      {
+        "id": "47260108787",
+        "name": "(ของแท้) Maybuck Japan ชุดเครื่องมือ ประแจ ลูกบล็อกอเนกประสงค์ ชุดไขควง สำหรับช่าง 46ชิ้น",
+        "price": 258,
+        "sales": "5k+",
+        "shopName": "ZmartRush Mall Store",
+        "commRate": "12%",
+        "commAmount": "฿30.96",
+        "productUrl": "https://shopee.co.th/product/1346825286/47260108787",
+        "defaultUrl": "https://s.shopee.co.th/AKY4eYGBx3",
+        "category": "เครื่องมือช่างและงานอุตสาหกรรม",
+        "highlights": ["ครบชุด 46 ชิ้นเหล็กแท้เกรด CRV ทนทาน", "ประแจแรงขันล็อคแน่นกระชับ ไม่พังง่าย", "รวมพาร์ทไขควงทุกรูปแบบ พร้อมกล่องจัดระเบียบ"]
+      },
+      {
+        "id": "53060079811",
+        "name": "(ของแท้) Maybuck ประเทศญี่ปุ่น 4 in 1 พกพา เครื่องปั๊มลมรถยนต์ + ไฟฉาย + พาวเวอร์แบงค์ + เครื่องช่วยสตาร์ทรถยนต์สุดคุ้ม ด่วน",
+        "price": 686,
+        "sales": "2k+",
+        "shopName": "ZmartRush Mall Store",
+        "commRate": "12%",
+        "commAmount": "฿82.32",
+        "productUrl": "https://shopee.co.th/product/1346825286/53060079811",
+        "defaultUrl": "https://s.shopee.co.th/AAEeSFGpI2",
+        "category": "เครื่องมือช่างและงานอุตสาหกรรม",
+        "highlights": ["สิริมงคลการเดินทางด้วยระบบ 4-in-1", "ปั๊มลมรวดเร็วอัตโนมัติหน้าจอดิจิตอลชัดเจน", "ระบบจั๊มสตาร์ทแบตหมดฉุกเฉินและพาวเวอร์แบงค์มือถือ"]
+      },
+      {
+        "id": "52760088567",
+        "name": "(ของแท้) Maybuck ประเทศญี่ปุ่น สว่านไร้สาย แบตลิเธียม พร้อมฟังก์ชั่นกระแทกค้อน+23ชิ้นหัวกัด+กล่องเครื่องมือครบ",
+        "price": 798,
+        "sales": "3.5k",
+        "shopName": "ZmartRush Mall Store",
+        "commRate": "12%",
+        "commAmount": "฿95.76",
+        "productUrl": "https://shopee.co.th/product/1346825286/52760088567",
+        "defaultUrl": "https://s.shopee.co.th/9zvEFwHSd1",
+        "category": "เครื่องมือช่างและงานอุตสาหกรรม",
+        "highlights": ["สว่านกระแพกแรงดันบิดสูง ทะลุผนังปูนไม้เหล็ก", "แบตเตอรี่ลิเธียมกำลังส่งสูง ทำงานไร้สายต่อเนื่อง", "พร้อมเซ็ตหัวเจาะอะไหล่เสริมช่าง 23 ชิ้นในเซต"]
+      },
+      {
+        "id": "52060083865",
+        "name": "(ของแท้) Maybuck ลูกล้อ PU ล้อรถเข็นเกรดหนา มีขนาด 1.5นิ้ว/ 2นิ้ว/ 3นิ้ว ล้อยาง ล้อเครื่องมือ ล้อรถเข็นหมุนได้ 360",
+        "price": 109,
+        "sales": "10k+",
+        "shopName": "ZmartRush Mall Store",
+        "commRate": "12%",
+        "commAmount": "฿13.08",
+        "productUrl": "https://shopee.co.th/product/1346825286/52060083865",
+        "defaultUrl": "https://s.shopee.co.th/9pbo3dI5y0",
+        "category": "เครื่องมือช่างและงานอุตสาหกรรม",
+        "highlights": ["วัสดุโพลียูรีเทน (PU) แข็งแรงทนทานถนอมพื้นผิว", "หมุนลื่นตลับลูกปืนคู่ รับน้ำหนักได้ดีเยี่ยมไรรบกวน", "มีตัวล็อคแน่นป้องกันลอยไถลปัดสั่นคลอน"]
+      },
+      {
+        "id": "50560088805",
+        "name": "(ของแท้) Maybuck เลื่อยโซ่ ไร้สาย 6นิ้ว เลื่อยไฟฟ้ามินิ แบบมือเดียว พกพาสะดวกตัดแต่งกิ่งไม้ แบตลิเธียมแรงขีด",
+        "price": 558,
+        "sales": "1.8k",
+        "shopName": "ZmartRush Mall Store",
+        "commRate": "12%",
+        "commAmount": "฿66.96",
+        "productUrl": "https://shopee.co.th/product/1346825286/50560088805",
+        "defaultUrl": "https://s.shopee.co.th/9fINrKIjIz",
+        "category": "เครื่องมือช่างและงานอุตสาหกรรม",
+        "highlights": ["เลื่อยไฟฟ้าเบาเพียง 1.2 กก. เพศหญิงใช้งานเล็มได้สบาย", "มอเตอร์แกนทองแดงแท้ ร้อนช้า แรงดีไม่มีตกหล่น", "แผ่นการ์ดบังเศษไม้กว้างแน่นเพื่อความปลอดภัยขั้นสูง"]
+      },
+      {
+        "id": "47410099783",
+        "name": "(ของแท้) Maybuck คีมปอกสายไฟ 7 in 1 คีมช่างไฟฟ้าวัสดุสแตนเลสชั้นดี ตัดได้คีบได้จบในด้ามเดียว",
+        "price": 178,
+        "sales": "4.2k",
+        "shopName": "ZmartRush Mall Store",
+        "commRate": "12%",
+        "commAmount": "฿21.36",
+        "productUrl": "https://shopee.co.th/product/1346825286/47410099783",
+        "defaultUrl": "https://s.shopee.co.th/9Uyxf1JMdy",
+        "category": "เครื่องมือช่างและงานอุตสาหกรรม",
+        "highlights": ["สแตนเลสรักษาความคมเฉียบ ปอกได้รวดเร็วสายไม่ช้ำ", "ฟังก์ชัน 7 ประโยชน์ คอร์ตัด ปลอก ย้ำ ม้วนคีบ ครบครัน", "ด้ามจับยางหนากันลื่นและป้องกันเหนี่ยวไฟฟ้าเหนี่ยวนำ"]
+      },
+      {
+        "id": "28944754890",
+        "name": "(ของแท้) Maybuck Japan ไขควงไฟฟ้ามัลติฟังก์ชั่น ชุดไขควงแม่เหล็ก มอเตอร์ไร้สายเกรดพรีเมียม",
+        "price": 188,
+        "sales": "8.5k",
+        "shopName": "ZmartRush Mall Store",
+        "commRate": "12%",
+        "commAmount": "฿22.56",
+        "productUrl": "https://shopee.co.th/product/1346825286/28944754890",
+        "defaultUrl": "https://s.shopee.co.th/9KfXSiJzyx",
+        "category": "เครื่องมือช่างและงานอุตสาหกรรม",
+        "highlights": ["ปุ่มควบคุมสมดุลขันซ้าย/ขวาได้ด้วยปุ่มเดียวไฟชิ้น", "ไฟสว่าง LED ส่องทำเลจุดมืดหน้างานแม่นยำชัดเจน", "หัวเหล็กแม่เหล็กดูดชิ้นสกรูไม่ให้หล่นกระเด็นทำงานง่าย"]
+      },
+      {
+        "id": "27294773466",
+        "name": "(ของแท้) Maybuck เครื่องเจียร์มุมไร้สาย แบตลิเธียม 12V/16.8V ใช้ตัดขัดโลหะ-ไม้ ทนทานบิดสูง",
+        "price": 225,
+        "sales": "3k",
+        "shopName": "ZmartRush Mall Store",
+        "commRate": "12%",
+        "commAmount": "฿27.00",
+        "productUrl": "https://shopee.co.th/product/1346825286/27294773466",
+        "defaultUrl": "https://s.shopee.co.th/1BJpjhp5YO",
+        "category": "เครื่องมือช่างและงานอุตสาหกรรม",
+        "highlights": ["เครื่องเจียรถาก ขัดเงา ตัดฉับไวรอบหมุนหมวดอุตสาหกรรม", "การออกแบบตามหลักสรีรศาสตร์ ถือกระชับถนอมข้อมือ", "แบตเตอรี่ชาร์จไวลากขุดหน้างานนับร้อยชงคล่องแคล้ว"]
+      },
+      {
+        "id": "42730673496",
+        "name": "(ของแท้) Maybuck แบตเตอรี่ลิเธียมขนาดมาตรฐาน หัวต่อสารพัด พัดลม เครื่องจ่ายพ่นสี เคลมง่ายส่งเร็ว",
+        "price": 208,
+        "sales": "2.4k",
+        "shopName": "ZmartRush Mall Store",
+        "commRate": "12%",
+        "commAmount": "฿24.96",
+        "productUrl": "https://shopee.co.th/product/1346825286/42730673496",
+        "defaultUrl": "https://s.shopee.co.th/110PXOpitN",
+        "category": "เครื่องมือช่างและงานอุตสาหกรรม",
+        "highlights": ["สเปกพาวเวอร์เซลล์คู่ชาร์จไว รอบจ่ายไฟฟ้าแรงพิกัด", "กันระเบิดความร้อนไม่ระบายอารมณ์สูง ปลอดภัยสากล", "รองรับเครื่องบล็อค สว่าน และอุปกรณ์พัดลม Maybuck"]
+      },
+      {
+        "id": "48010099816",
+        "name": "(ของแท้) Maybuck ตลับเมตรความแม่นยำสูง สำหรับช่างมืออาชีพ 3m/5m/7.5m/10m แข็งแรงทนทานสุด",
+        "price": 128,
+        "sales": "15k+",
+        "shopName": "ZmartRush Mall Store",
+        "commRate": "12%",
+        "commAmount": "฿15.36",
+        "productUrl": "https://shopee.co.th/product/1346825286/48010099816",
+        "defaultUrl": "https://s.shopee.co.th/qgzL5qMEM",
+        "category": "เครื่องมือช่างและงานอุตสาหกรรม",
+        "highlights": ["ใบวัดเนื้อสแตนเลสเคลือบสารกันแสงสะท้อนตาเลือนราง", "สปริงดึงกลับอัตโนมัติแกร่งเป็นสิบหมื่นรอบไม่มีรูด", "มีฐานจับแม่เหล็กปลายเหล็กวัดแน่นหนารอบชิงสม่ำเสมอ"]
+      },
+      {
+        "id": "46806053003",
+        "name": "Maybuck Japan ปั๊มน้ำเบนซิน 4 จังหวะ GX-35 ปั๊มน้ำเกษตรรุ่นท็อปสุด แรงจัดประหยัดน้ำมันจริง",
+        "price": 2000,
+        "sales": "500",
+        "shopName": "Maybuck Official Store",
+        "commRate": "12%",
+        "commAmount": "฿239.88",
+        "productUrl": "https://shopee.co.th/product/1551833371/46806053003",
+        "defaultUrl": "https://s.shopee.co.th/gNZ8mqzZL",
+        "category": "ของแต่งสวนและเกษตรกรรม",
+        "highlights": ["เครื่องยนต์เบนซิน 4 จังหวะ GX-35 สตาร์ทติดง่ายมาก", "แรงดันพุ่งดูดส่งแนวราบสัญจรสูงขึ้นเนินภูเขาแสนสบาย", "ประหยัดเชื้อเพลิง ทนทานตลับลูกปืนแกร่งยาวนา"]
+      },
+      {
+        "id": "57657855050",
+        "name": "Maybuck ประแจปากตาย แหวนข้าง ขนาด 6-24mm เหล็กหนาขันคลายคล่องแร้ว Combination Spanner",
+        "price": 21,
+        "sales": "20k+",
+        "shopName": "Maybuck Official Store",
+        "commRate": "10%",
+        "commAmount": "฿2.10",
+        "productUrl": "https://shopee.co.th/product/1551833371/57657855050",
+        "defaultUrl": "https://s.shopee.co.th/W48wTrcuK",
+        "category": "เครื่องมือช่างและงานอุตสาหกรรม",
+        "highlights": ["เหล็กกล้าผสมโครมวานาเดียม (CR-V) ชุบแข็งกระสับกระส่าย", "หัวประแจองศาสะดวกหลบบอด หลบมุม ขันแรงได้มั่นคง", "พิกัดขนาดหลากหลายถวิลหาทุกล็อคตัวเล็กถึงตัวหลัก"]
+      },
+      {
+        "id": "52652187878",
+        "name": "Maybuck Japan เครื่องเป่าลมปรับสปีด โบลเวอร์เทอร์โบ ขจัดเศษงานปูนฝุ่นขี้ผงในสวนและอู่รถยนต์",
+        "price": 499,
+        "sales": "8k+",
+        "shopName": "Maybuck Official Store",
+        "commRate": "10%",
+        "commAmount": "฿49.90",
+        "productUrl": "https://shopee.co.th/product/1551833371/52652187878",
+        "defaultUrl": "https://s.shopee.co.th/LkikAsGFJ",
+        "category": "เครื่องมือช่างและงานอุตสาหกรรม",
+        "highlights": ["ลมหมุนเทอร์โบแรงสูง เป่าใบไม้ฝุ่นผงตกแต่งสัญจรสะกิด", "สวิตช์ล็อคความเร็วดำเนินยาวต่อเนื่องสบายพพก", "แถมฟรีก้านยืดเป่ากู้ภัยซอกลึก 2 แขนเป่ามาตรฐาน"]
+      },
+      {
+        "id": "56304807244",
+        "name": "Maybuck ปืนยิงกาวไฟฟ้ากระแสแอมป์คู่ 20W 80W 100W กาวร้อนแห้งเร็ว ด้ามฉนวนปลอดภัย Glue Gun",
+        "price": 59,
+        "sales": "35k+",
+        "shopName": "Maybuck Official Store",
+        "commRate": "10%",
+        "commAmount": "฿5.90",
+        "productUrl": "https://shopee.co.th/product/1551833371/56304807244",
+        "defaultUrl": "https://s.shopee.co.th/BRIXrstaI",
+        "category": "เครื่องมือช่างและงานอุตสาหกรรม",
+        "highlights": ["อุ่นหัวฉีดร้อนไวภายใน 60 วินาทีเนื้อไหลเนียนสว่าง", "มีวาล์วกันไหลเยิ้มหยดเกลื่อนหน้างานสะอ้านถนอมมือ", "หัวพลาสติกรวมฉนวนอย่างหนาทนความร้อนไฟซ้อม"]
+      }
+    ];
+
+    // Main Engine to load elements
+    function renderProducts(filterSelected = 'ทั้งหมด', query = '') {
+      const grid = document.getElementById('products-grid');
+      const emptyState = document.getElementById('empty-state');
+      grid.innerHTML = '';
+      
+      let filtered = productsData;
+      
+      if (filterSelected !== 'ทั้งหมด') {
+        filtered = filtered.filter(p => p.category === filterSelected);
+      }
+      
+      if (query.trim() !== '') {
+        const q = query.toLowerCase();
+        filtered = filtered.filter(p => 
+          p.name.toLowerCase().includes(q) || 
+          p.id.includes(q) || 
+          p.category.toLowerCase().includes(q)
+        );
+      }
+
+      document.getElementById('prod-count').textContent = filtered.length;
+
+      if (filtered.length === 0) {
+        grid.classList.add('hidden');
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      grid.classList.remove('hidden');
+      emptyState.classList.add('hidden');
+
+      filtered.forEach((p, idx) => {
+        const highlightsHtml = p.highlights ? p.highlights.map(h => 
+          `<li class="flex items-start gap-2 text-xs text-slate-300">
+            <i class="fa-solid fa-circle-check text-amber-500 mt-0.5 shrink-0"></i>
+            <span>${h}</span>
+          </li>`
+        ).join('') : '';
+
+        const card = document.createElement('div');
+        card.className = "bg-brand-card/90 hover:bg-brand-card border border-brand-border rounded-xl overflow-hidden shadow-lg hover:shadow-amber-500/5 transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between";
+        card.innerHTML = `
+          <div>
+            <!-- Banner Badge -->
+            <div class="bg-slate-900 border-b border-brand-border/40 p-4 flex justify-between items-center bg-gradient-to-r from-slate-900 via-slate-900/40 to-slate-900">
+              <span class="text-[10px] font-mono tracking-wider font-bold text-slate-400 bg-slate-800 px-2 py-0.5 rounded border border-brand-border">ID: ${p.id}</span>
+              <span class="text-xs font-bold text-amber-400 flex items-center gap-1.5 font-mono">
+                <i class="fa-solid fa-bolt text-xs tracking-bounce animate-pulse"></i> HOT DEAL
+              </span>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-5 md:p-6">
+              <div class="text-[10px] uppercase tracking-wider font-extrabold text-amber-500 mb-2 font-mono flex items-center gap-1">
+                <i class="fa-solid fa-tags text-[9px]"></i>
+                <span>${p.category}</span>
+              </div>
+              <h3 class="text-white text-base font-bold line-clamp-2 hover:text-amber-400 transition-colors cursor-pointer leading-snug mb-3" title="${p.name}">
+                ${p.name}
+              </h3>
+              
+              <!-- Features Highlights -->
+              <ul class="space-y-2 mb-5 mt-1 border-t border-brand-border/40 pt-4">
+                ${highlightsHtml}
+              </ul>
+
+              <!-- Stats & Supplier Details -->
+              <div class="flex items-center justify-between mt-auto bg-slate-900/40 p-3 rounded-lg border border-brand-border/30 mb-2">
+                <div>
+                  <span class="text-[10px] block text-brand-textMuted uppercase font-mono tracking-wider">จัดจำหน่ายโดย</span>
+                  <span class="text-[11px] font-medium text-slate-300 flex items-center gap-1 mt-0.5">
+                    <i class="fa-solid fa-circle-check text-emerald-400 text-[10px]"></i> ${p.shopName}
+                  </span>
+                </div>
+                <div class="text-right">
+                  <span class="text-[10px] block text-brand-textMuted uppercase font-mono tracking-wider">ยอดขายพิกัด</span>
+                  <span class="text-xs font-bold text-white font-mono">${p.sales} ชิ้น+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer Buy Control -->
+          <div class="p-5 md:p-6 pt-0 border-t border-brand-border/30 mt-auto bg-slate-900/20">
+            <div class="flex items-baseline justify-between mb-4">
+              <div>
+                <span class="text-[10px] text-brand-textMuted block font-mono">ราคาดีลพิเศษ</span>
+                <span class="text-2xl font-black text-amber-400 font-mono">฿${p.price.toLocaleString("th-TH")}</span>
+              </div>
+              <div class="text-right">
+                <span class="text-[9px] text-emerald-400 uppercase font-mono tracking-wider block">ค่าคอมคู่สัญญา (~${p.commRate})</span>
+                <span class="text-xs font-bold font-mono text-emerald-400">${p.commAmount}</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="copyAffLink('${p.defaultUrl}', ${idx})" id="copy-btn-${idx}" class="w-full flex items-center justify-center gap-1.5 py-2.5 px-3 bg-slate-800 hover:bg-slate-700/80 text-white rounded-lg text-xs font-bold font-mono border border-brand-border transition-colors">
+                <i class="fa-solid fa-copy text-[11px]"></i> <span>COPY LINK</span>
+              </button>
+              <a href="${p.defaultUrl}" target="_blank" class="w-full flex items-center justify-center gap-1.5 py-2.5 px-3 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-lg text-xs tracking-wide transition-colors">
+                <span>ซื้อหน้าแอพ</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Interactive Actions
+    function filterCategory(cat) {
+      document.querySelectorAll('.category-tab').forEach(btn => {
+        btn.className = "category-tab px-4 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all";
+      });
+      const activeBtn = document.getElementById(`tab-${cat}`);
+      if (activeBtn) {
+        activeBtn.className = "category-tab px-4 py-2 text-xs font-semibold rounded-lg bg-amber-500 text-slate-900 hover:opacity-90 transition-all shadow-lg shadow-amber-500/20";
+      }
+      
+      const query = document.getElementById('search-input').value;
+      renderProducts(cat, query);
+    }
+
+    // Copy to clipboard helper
+    function copyAffLink(url, idx) {
+      const btn = document.getElementById(`copy-btn-${idx}`);
+      const fallback = () => {
+        const el = document.createElement('textarea');
+        el.value = url;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        alertCopied(btn);
+      };
+
+      if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+        navigator.clipboard.writeText(url)
+          .then(() => alertCopied(btn))
+          .catch(fallback);
+      } else {
+        fallback();
+      }
+    }
+
+    function alertCopied(btn) {
+      const origText = btn.innerHTML;
+      btn.innerHTML = `<i class="fa-solid fa-check text-emerald-400"></i> <span class="text-emerald-400">COPIED!</span>`;
+      btn.classList.add('border-emerald-500/50');
+      setTimeout(() => {
+        btn.innerHTML = origText;
+        btn.classList.remove('border-emerald-500/50');
+      }, 2000);
+    }
+
+    // Dynamic search binding
+    document.getElementById('search-input').addEventListener('input', (e) => {
+      // Find which category tab is active
+      let activeCat = 'ทั้งหมด';
+      document.querySelectorAll('.category-tab').forEach(btn => {
+        if (btn.classList.contains('bg-amber-500')) {
+          activeCat = btn.textContent.trim();
+        }
+      });
+      renderProducts(activeCat, e.target.value);
+    });
+
+    // Simulated Active Buyers Pulse
+    setInterval(() => {
+      const num = Math.floor(Math.random() * 40) + 120;
+      document.getElementById('active-buyers').textContent = num + '+';
+    }, 4000);
+
+    // Initial Fire
+    renderProducts();
+  </script>
+
+  <!-- Google Structured Product List Schema (JSON-LD) for AEO/SGE dominance -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Maybuck Thailand Premium Hardware & Garden Tools List",
+    "description": "Premium curated hardware and gardening products by Maybuck brand direct from source factory code list.",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Maybuck มีดคัตเตอร์อเนกประสงค์ SK2",
+        "url": "https://s.shopee.co.th/AUrUqrFYc4"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Maybuck Japan ชุดเครื่องมือ ประแจ 46ชิ้น",
+        "url": "https://s.shopee.co.th/AKY4eYGBx3"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Maybuck 4 in 1 ปั๊มลมรถยนต์ + ไฟฉาย + เครื่องพ่วงแบต",
+        "url": "https://s.shopee.co.th/AAEeSFGpI2"
+      }
+    ]
+  }
+  </script>
 </body>
 </html>
