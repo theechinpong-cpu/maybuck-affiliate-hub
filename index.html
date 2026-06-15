@@ -5842,7 +5842,7 @@
               <button onclick="copyAffLink('${p.defaultUrl}', ${idx})" id="copy-btn-${idx}" class="w-full flex items-center justify-center gap-1.5 py-2.5 px-3 bg-slate-800 hover:bg-slate-700/80 text-white rounded-lg text-xs font-bold font-mono border border-brand-border transition-colors">
                 <i class="fa-solid fa-copy text-[11px]"></i> <span>COPY LINK</span>
               </button>
-              <a href="${p.defaultUrl}" target="_blank" class="w-full flex items-center justify-center gap-1.5 py-2.5 px-3 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-lg text-xs tracking-wide transition-colors">
+              <a href="${p.defaultUrl}" target="_blank" onclick="reportAffClickByIdx(${idx})" class="w-full flex items-center justify-center gap-1.5 py-2.5 px-3 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-lg text-xs tracking-wide transition-colors">
                 <span>ซื้อหน้าแอพ</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
               </a>
             </div>
@@ -5866,8 +5866,42 @@
       renderProducts(cat, query);
     }
 
+    // Click and Copy Telemetry Logger (MANDATE 3 Pipeline Reporting)
+    function reportAffClick(id, dest, name, source = 'Maybuck Hub (GitHub)') {
+      try {
+        let baseUrl = window.location.origin;
+        if (baseUrl.includes('github.io') || (baseUrl.includes('localhost') === false && baseUrl.includes('127.0.0.1') === false && baseUrl.includes('192.168') === false)) {
+          baseUrl = "https://ais-pre-zi6sdjdj4luezaqmyovk5h-330328577105.asia-southeast1.run.app";
+        }
+        const trackerUrl = `${baseUrl}/api/maybuck/click?id=${encodeURIComponent(id)}&dest=${encodeURIComponent(dest)}&name=${encodeURIComponent(name)}&source=${encodeURIComponent(source)}&reportOnly=true`;
+        
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon(trackerUrl);
+        } else {
+          fetch(trackerUrl, { mode: 'no-cors' }).catch(() => {});
+        }
+      } catch (err) {
+        console.warn('Telemetry offline:', err);
+      }
+    }
+
+    function reportAffClickByIdx(idx) {
+      try {
+        const p = productsData[idx];
+        if (!p) return;
+        reportAffClick(p.id, p.defaultUrl, p.name, 'Maybuck Hub (GitHub)');
+      } catch (err) {}
+    }
+
     // Copy to clipboard helper
     function copyAffLink(url, idx) {
+      try {
+        const p = productsData[idx];
+        if (p) {
+          reportAffClick(p.id, url, p.name, 'Copy Link Action');
+        }
+      } catch (err) {}
+
       const btn = document.getElementById(`copy-btn-${idx}`);
       const fallback = () => {
         const el = document.createElement('textarea');
